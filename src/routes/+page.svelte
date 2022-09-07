@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { createScene } from '../lib/scene.js';
+	import { createScene } from '$lib/scene.js';
 
 	let el;
 
@@ -14,4 +14,27 @@
 	<meta name="description" content="Three.js example app built with Svelte" />
 </svelte:head>
 
-<canvas bind:this={el} />
+<section>
+	<h1>HIT ME WITH YOUR PUNCHLINE</h1>
+</section>
+
+<section class="canvas">
+	<canvas bind:this={el} />
+</section>
+
+<style>
+	section {
+		min-height: calc(100vh - 20rem);
+		width: 100%;
+		background: linear-gradient(69deg, cyan, yellow);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.canvas {
+		max-height: calc(100vh - 20rem);
+		display: block;
+	}
+</style>
