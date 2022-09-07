@@ -5,8 +5,9 @@
 
 	<nav>
 		<div class="social">
-			<a href="#">social 1</a>
-			<a href="#">social 2</a>
+			<a href="#">insta</a>
+			<a href="#">spotify</a>
+			<a href="#">idk</a>
 		</div>
 		<div class="links">
 			<a href="/stuff">stuff</a>
@@ -57,11 +58,21 @@
 		color: inherit;
 	}
 
+	header nav div {
+		display: flex;
+		gap: 1rem;
+	}
+
 	header .logo {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		font-size: 30px;
+	}
+
+	.logo {
+		font-family: 'Oswald', sans-serif;
 	}
 
 	footer {
@@ -73,5 +84,6 @@
 	.logo,
 	.logo a {
 		color: inherit;
+		text-decoration: none;
 	}
 </style>

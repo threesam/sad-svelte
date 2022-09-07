@@ -15,7 +15,7 @@
 </svelte:head>
 
 <section>
-	<h1>HIT ME WITH YOUR PUNCHLINE</h1>
+	<h1>Under Construction</h1>
 </section>
 
 <section class="canvas">
