@@ -3,26 +3,34 @@ import * as THREE from 'three'
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 const geometry = new THREE.BoxGeometry()
+console.log('THREE', THREE)
 
-const amount = 20
-for (let i = -amount; i < amount; i += 2) {
-	const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+const material = new THREE.MeshBasicMaterial({ color: 'cyan' })
+material.dithering = true
+material.wireframe = true
 
-	const newCube = new THREE.Mesh(geometry, material)
-	newCube.position.x = Math.random() * 2 * i
-	newCube.position.y = Math.random() * 2 * i
-	newCube.position.z = Math.random() * 2 * i
+const material2 = new THREE.MeshBasicMaterial({ color: 'yellow' })
+material2.dithering = true
+material2.wireframe = true
 
-	scene.add(newCube)
+const offset = 2.5
+const cube = new THREE.Mesh(geometry, material)
+cube.position.x = -offset
+const cube2 = new THREE.Mesh(geometry, material2)
+cube2.position.x = offset
+console.log('cube', cube)
 
-}
+scene.add(cube)
+scene.add(cube2)
 let renderer
 camera.position.z = 5
 
 const animate = () => {
 	requestAnimationFrame(animate)
-	// cube.rotation.x += 0.01
-	// cube.rotation.y += 0.01
+	cube.rotation.x += 0.01
+	cube.rotation.y += 0.006
+	cube2.rotation.x -= 0.006
+	cube2.rotation.y -= 0.01
 	// cube.scale.x += Math.random() * 0.002
 	renderer.render(scene, camera)
 }

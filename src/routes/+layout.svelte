@@ -1,5 +1,7 @@
 <header>
-	<a href="/" class="logo">SAD GILMORE</a>
+	<div class="logo">
+		<a href="/">SAD GILMORE</a>
+	</div>
 
 	<nav>
 		<div class="social">
@@ -45,6 +47,21 @@
 		background: rgb(19, 19, 19);
 		padding: 0 1rem;
 		color: white;
+		position: relative;
+	}
+
+	header nav {
+		width: inherit;
+		display: inherit;
+		justify-content: inherit;
+		color: inherit;
+	}
+
+	header .logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	footer {
@@ -53,7 +70,8 @@
 	}
 
 	nav a,
-	.logo {
+	.logo,
+	.logo a {
 		color: inherit;
 	}
 </style>
